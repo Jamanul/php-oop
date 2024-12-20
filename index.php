@@ -1,4 +1,5 @@
 <?php 
 require_once("./Transaction.php");
 $transaction = new Transaction();
-var_dump($transaction);
+$transaction -> $amount =15; 
+var_dump($transaction -> $amount);
