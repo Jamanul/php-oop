@@ -1,17 +1,20 @@
 <?php
 
-class Transaction {
-   public float $amount;
-   public string $descirption;
+// class Transaction {
+//    private float $amount;
+//    private string $descirption;
 
-    public function __construct(float $amount , string $descirption) {
-    $this->amount = $amount;
-    $this->descirption =$descirption;
-   }
-   public function addTax (float $tax): void{
-    $this->amount += $this->amount *$tax /100; 
-   }
-}
+//     public function __construct(float $amount , string $descirption) {
+//     $this->amount = $amount;
+//     $this->descirption =$descirption;
+//    }
+//    public function addTax (float $tax): void{
+//     $this->amount += $this->amount *$tax /100; 
+//    }
+//    public function getAmount (): float{
+//     return $this-> amount;
+//    }
+// }
 
 
 
@@ -48,3 +51,19 @@ class Car {
     }
 }
 
+class User {
+    public ?Profile $profile = null;
+}
+
+class Profile {
+    public function getBio(): string {
+        return "This is the bio.";
+    }
+}
+
+$user = new User();
+
+// Use the null safe operator to avoid explicit null checks
+echo $user->profile?->getBio() ?? "Profile not found.";
+
+ 
