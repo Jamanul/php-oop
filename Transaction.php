@@ -44,6 +44,9 @@ class Car {
     public function displayDetails() {
         echo "This car is a " . $this->color . " " . $this->brand . ".<br>";
     }
+    public function displayDetailsMore() {
+        echo "This car is a " . $this->color . " " . $this->brand . ".<br>";
+    }
     
     // Destructor
     public function __destruct() {
